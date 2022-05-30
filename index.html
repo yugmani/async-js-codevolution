@@ -1,0 +1,60 @@
+<div id="app">
+  <h1>ASYNCHRONOUS JAVASCRIPT</h1>
+  <ul>
+    <li>
+      JavaScript is a
+      <mark><em>synchronous, blocking, single threaded</em></mark> language.
+    </li>
+    <li>
+      <strong>Synchronous:</strong> If we have two functions which log messages
+      to the console, code executes top down, with only one line executing at
+      any given time.
+    </li>
+    <li>
+      <strong>Blocking</strong>:
+      <ol>
+        <li>
+          No matter how long a previous process takes, the subsequent processes
+          won't kick off until the former is completed.
+        </li>
+        <li>
+          If function A had to execute an intensive chunk of code, JavaScript
+          has to finish that without moving on to function B. Even if that code
+          takes 10 seconds or 1 minute.
+        </li>
+        <li>
+          Web app runs in a browser and it executes an intensive chunk of code
+          without returning control to the browser, the browser can appear to be
+          frozen.
+        </li>
+      </ol>
+    </li>
+    <li>
+      <h3>Single-threaded</h3>
+      <ol>
+        <li>
+          A thread is simply a process that your JavaScript program can use to
+          run a task.
+        </li>
+        <li>Each thread can only do one task at a time.</li>
+        <li>
+          JavaScript has just the one thread called the main thread for
+          executing any code.
+        </li>
+      </ol>
+    </li>
+    <li>
+      <h3>Problem with synchronous, blocking, single-threaded model of JavaScript.</h3>
+      <ol>
+        <li style="background-color:lightgray">
+          <pre><code>
+  let response = fetchDataFromDB('endpoint')</br>
+  displayDataFromDB(response);</code>               
+          </pre></li>
+        <li><em>fetchDataFromDB('endpoint') could take 1 second or even more</em></li>
+        <li>During that time, we can't run any further code.</li>
+        <li>JavaScript, if it simply proceeds to the next line without waiting, we have an error because data is not what we expect it to be.</li>
+      </ol>      
+    </li>
+  </ul>
+</div>
