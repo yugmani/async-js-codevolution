@@ -42,3 +42,15 @@ console.log('Wait for 2 seconds...');
 const timeoutId = setTimeout(myGreet, 3000, 'Yoog');
 //Hello Yoog ->logs to the console after 3 seconds.
 // clearTimeout(timeoutId); //nothing is logged to the console.
+
+// **************************************************
+// **************** setInterval() *******************
+// **************************************************
+
+function namaste() {
+  console.log('Namaste!');
+}
+
+// let timeInterval = setInterval(namaste, 2000);
+// clearInterval(timeInterval);
+//Logs 'Namaste' in every 2 seconds.
