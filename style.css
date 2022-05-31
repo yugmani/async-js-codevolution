@@ -1,3 +1,27 @@
-h1, h2 {
+h1,
+h2 {
   font-family: Lato;
+}
+
+#list-demo {
+  background-color: whitesmoke;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  padding: 5px;
+}
+
+#demo {
+  color: Blue;
+  font-family: sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#btn {
+  color: red;
+  margin-top: 5px;
 }

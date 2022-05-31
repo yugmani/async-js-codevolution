@@ -1,3 +1,5 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <div id="app">
   <h1>ASYNCHRONOUS JAVASCRIPT</h1>
   <ul>
@@ -97,9 +99,40 @@
   <li>Timers and intervals are not part of JavaScript itself. They are implemented by the browser and setTimeout and setInterval are basically names given to that functionality in JavaScript.</li>
   <li>Duration paramter is the minimum delay, not guaranteed delay.</li>
   <li>It is possible to achieve the same effect as setInterval with a recursive setTimeout.</li>
-  <li>In recursive setTimeout(), duration is guaranteed between executions. Irrespective of how long the code takes to run, the inverval will remain the same. You can also calculate a different delay before running each iteration.</li>
-  <li>With setInterval(), the duration interval includes the time taken to execute the code you want to run. First time the code takes 40ms to run, the interval is 60ms. Second time the code takes 50ms to run, the interval is 50ms. Moreover, setIterval is always a fixed interval duration.</li>
+  <li>In recursive <em>setTimeout()</em>, duration is guaranteed between executions. Irrespective of how long the code takes to run, the inverval will remain the same. You can also calculate a different delay before running each iteration.</li>
+  <li>With <em>setInterval()</em>, the duration interval includes the time taken to execute the code you want to run. First time the code takes 40ms to run, the interval is 60ms. Second time the code takes 50ms to run, the interval is 50ms. Moreover, setIterval is always a fixed interval duration.</li>
     </ol>
+  </li>
+  <li>
+  <h3>Callbacks</h3>
+  <ol>
+    <li>In JavaScript, <em>functions</em> are first class objects.</li>
+    <li>Just like an object, a function can be passed as an <em>argument</em> to a function.</li>
+    <li>A function can also be returned as values from other functions.</li>
+    <li>Any function that is passed as an argument to another function is called a <mark><em>callback function</em></mark> in JavaScript.</li>
+    <li>The function which accepts a function as an argument or returns a function is called a <em>higher order function</em>.</li>
+    <li><strong>Synchronous Callbacks</strong>: A callback which is executed immediately is called a synchronous callback.</li>
+    <li>Example of synchronous callbacks:<pre><code style="background-color:lightgray;">
+let numbers = [1, 2, 3, 4, 5, 6];
+numbers.sort( (a,b) => a - b );
+numbers.map(n => n * 2 );
+numbers.filter(n => n % 2 === 2 );
+</code></pre></li>
+    <li><strong>Asynchronous callbacks</strong>: 
+      <ol style="list-style-type:lower-alpha">
+        <li>An asynchronous callback is a callback that is often used to continue or resume code execution after an asynchronous operation has completed.</li>
+        <li>Callbacks are used to delay the execution of a function until a particular time or event has occured.</li>
+        <li>Data fetching takes time and we can only run the function we want to after the data has been fetched and not immediately.</li>
+      </ol>     
+    </li> 
+    <li id="list-demo">
+    <div id="demo">
+    Demo of Callback
+    </div>
+    <button id="btn">Click</button>
+    </li>
+    <li>Callback functions allow you to delay the execution of a function.</li>
+  </ol>
   </li>
   </ul>
   <p>
