@@ -52,5 +52,25 @@ function namaste() {
 }
 
 // let timeInterval = setInterval(namaste, 2000);
-// clearInterval(timeInterval);
 //Logs 'Namaste' in every 2 seconds.
+
+// clearInterval(timeInterval);
+// Logs nothing after clearing intervals.
+
+// Recursive setTimeout
+// ******************************************
+
+// let timeout = setTimeout(function run(){
+//   console.log("I am coming")
+//   setTimeout(run, 1000)
+// }, 1000);
+
+// clearTimeout(timeout);
+// *****************************************
+
+//Equivalent to
+// let clearTimer =  setInterval(function run(){
+// console.log('I am coming....');
+// }, 1000);
+
+// clearInterval(clearTimer);

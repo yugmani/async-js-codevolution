@@ -79,6 +79,9 @@
     <li>After the second parameter, you can pass in zero or more values that represent any parameters you want to pass to the function when it is run.</li>
     <li>To clear a timeout, you can use the <mark><code>clearTimeout()</code></mark> method passing in the identifier returned by setTimeout as a parameter.</li>
     <li>A more practical scenario is clearing timeouts when the component is unmounting to free up the resources and also prevent code from incorrectly executing on an unmounted compontnt.</li>
+    <li>
+    <strong><mark><code>setIterval()</code></mark></strong>: The <em>setInterval()</em> function repeatedly runs the same code over and over again at regular intervals.
+    </li>
     <li>Syntax: <pre><code style="background-color:lightyellow;">setInterval(function, duration, param1, param2, ...)</code></pre>
       <ul>
         <li>The first parameter is the code to execute.</li>
@@ -86,10 +89,19 @@
         <li>After the second parameter, you can pass in zero or more values that represent any parameters you want to pass to the function when it is run.</li>
       </ul>    
     </li>
+    <li>Intervals keep running a task forever so you should clear the interval when appropriate.</li>
   </ul>  
   </li>
+  <li><h3>Noterworthy points</h3>
+    <ol>
+  <li>Timers and intervals are not part of JavaScript itself. They are implemented by the browser and setTimeout and setInterval are basically names given to that functionality in JavaScript.</li>
+  <li>Duration paramter is the minimum delay, not guaranteed delay.</li>
+  <li>It is possible to achieve the same effect as setInterval with a recursive setTimeout.</li>
+  <li>In recursive setTimeout(), duration is guaranteed between executions. Irrespective of how long the code takes to run, the inverval will remain the same. You can also calculate a different delay before running each iteration.</li>
+  <li>With setInterval(), the duration interval includes the time taken to execute the code you want to run. First time the code takes 40ms to run, the interval is 60ms. Second time the code takes 50ms to run, the interval is 50ms. Moreover, setIterval is always a fixed interval duration.</li>
+    </ol>
+  </li>
   </ul>
-
   <p>
   <a href="https://www.youtube.com/watch?v=exBgWAIeIeg">Asynchronous JavaScript Crash Course 2022 by Codevolution</a>
   </p>
