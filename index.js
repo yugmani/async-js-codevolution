@@ -20,3 +20,25 @@ B();
 
 //A
 //B
+
+// **************************************************
+// **************** setTimeout() ********************
+// **************************************************
+
+function greet() {
+  console.log('Hello');
+}
+
+function myGreet(name) {
+  console.log(`Hello ${name}`);
+}
+
+setTimeout(greet, 2000);
+
+//hello ->logs to the console after 2 seconds.
+//Wait for 2 seconds...
+console.log('Wait for 2 seconds...');
+
+const timeoutId = setTimeout(myGreet, 3000, 'Yoog');
+//Hello Yoog ->logs to the console after 3 seconds.
+// clearTimeout(timeoutId); //nothing is logged to the console.

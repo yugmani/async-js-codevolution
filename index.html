@@ -66,5 +66,24 @@
         <li>You can let your code do several things at the same time without stopping or blocking your main thread.</li>
       </ol>
     </li>
+    <li>
+    <h3>Timeouts & Intervals</h3>    
+    <p>The JavaScript has traditional methods available to run code asynchronously:</p>
+  <ul>
+    <li>after a set time period elapsed</li>
+    <li>or at regular intervals of time</li>
+    <li><mark><strong>setTimeout()</strong></mark> The <em>setTimeout()</em> function executes a particular block of code once after a specified time has elapsed.</li>
+    <li>Syntax: <pre><code style="background-color:lightyellow;">setTimeout(function, duration, param1, param2, ...)</code></pre></li>
+    <li>The first parameter is a function to run, or a reference to a function defined elsewhere.</li>
+    <li>The second parameter is a number representing the duration in milliseconds to wait before executing the code.</li>
+    <li>After the second parameter, you can pass in zero or more values that represent any parameters you want to pass to the function when it is run.</li>
+    <li>To clear a timeout, you can use the <mark><code>clearTimeout()</code></mark> method passing in the identifier returned by setTimeout as a parameter.</li>
+    <li>A more practical scenario is clearing timeouts when the component is unmounting to free up the resources and also prevent code from incorrectly executing on an unmounted compontnt.</li>
+  </ul>  
+  </li>
   </ul>
+
+  <p>
+  <a href="https://www.youtube.com/watch?v=exBgWAIeIeg">Asynchronous JavaScript Crash Course 2022 by Codevolution</a>
+  </p>
 </div>
