@@ -107,9 +107,9 @@ document.getElementById('btn').addEventListener('click', callback);
 //the callback function is executed only when the user clicks on the button.
 
 //example 3
-$.get('url', function (data) {
-  $('.result').html(data);
-  console.log('Load was performed...');
-});
+// $.get('url', function (data) {
+//   $('.result').html(data);
+//   console.log('Load was performed...');
+// });
 
 // The callback is executed only after the data fetching is over.
